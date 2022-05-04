@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Welcome to your Lab Sandbox
+We’re glad you’re here! Let’s get you started in your Lab Sandbox   
+with a quick README to answer any questions you might have.   
+It’s preconfigured by Coursera and includes all dependencies   
+(libraries and packages) to complete your work in Visual Studio Code.   
+You can practice, run test cases, and work on assignments from your browser.   
+Learn more about the Coursera Lab Sandbox and how to use the VSCode   
+sandbox environment (including how to upload and download files)   
+in the Learner Help Center:   
+https://learner.coursera.help/hc/articles/360062301971  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## How can I get started?
+1. Read Getting Started with Your Lab for important course-specific guidance.  
+2. Download any assessment or starter files that were included   
+   in the course instructions and materials. You can download most files   
+   by clicking on them. If the file opens in a new browser tab, right click   
+   on a blank area of the browser page and select Save As to save your file locally.  
+3. Upload your files into the Lab Sandbox and complete the course work.  
+4. When you’re done, save your work in your sandbox.     
 
-## Available Scripts
 
-In the project directory, you can run:
+## How can I receive a score for work completed in the Lab Sandbox?   
+1. To receive a score for your work within Coursera, follow the course   
+   instructions listed within each assignment.  
+2. If you’re working on a Programming Assignment or Peer Review, you can  
+   download your Lab files to your local computer and upload them directly to the  
+   assignment. If you are working on a Quiz, you can use your Lab environment to   
+   complete your work and then select your responses directly within the quiz.  
+3. If you have any questions as you get started, we recommend reviewing  
+   Getting Started with Your Lab for course-specific guidance on how to work  
+   with the Lab Sandbox for this course.    
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## How can I get help with my Lab Sandbox?
+You can learn more about how to use the Lab Sandbox environment   
+and find tips to troubleshoot in the Learner Help Center.    
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Coursera currently maintains Lab Sandboxes and course instructors don’t   
+have the ability to modify or troubleshoot sandbox environments.   
+If you do run into any time sensitive platform issues, instead of contacting  
+the course instructor and/or staff, reach out to our 24/7 chat support.  
+in the Learner Help Center. https://learner.coursera.help/hc  
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Happy learning!   

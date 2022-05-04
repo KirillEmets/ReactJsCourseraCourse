@@ -1,0 +1,15 @@
+{
+"files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true,
+    "**/.Trash*": true,
+    "**/.hidden": true,
+    "**/.vscode": true,
+    "**/.skiparchive": true,
+},
+"markdown.preview.openMarkdownLinks": "inPreview",
+"workbench.startupEditor": "readme",
+"markdown.extension.preview.autoShowPreviewToSide": true
+}
