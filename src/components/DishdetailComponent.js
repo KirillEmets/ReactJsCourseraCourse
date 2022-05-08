@@ -1,6 +1,6 @@
 import { Card, CardImg, CardBody, CardTitle, CardText } from "reactstrap";
 
-export function DishdetailComponent(props = {}) {
+export function DishDetail(props = {}) {
     const dish = props.dish;
     if (dish != null)
         return (
