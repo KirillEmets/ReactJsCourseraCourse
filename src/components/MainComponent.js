@@ -10,6 +10,7 @@ import { COMMENTS } from '../shared/comments';
 import { PROMOTIONS } from '../shared/promotions';
 import { LEADERS } from '../shared/leaders';
 import { Navigate, Route, Routes, useParams, } from 'react-router-dom';
+import About from './AboutComponent';
 
 
 class Main extends Component {
@@ -52,6 +53,7 @@ class Main extends Component {
           <Route path="/" element={HomePage} />
           <Route exact path='/menu' element={<Menu dishes={this.state.dishes} />} />
           <Route exact path='/contactus' element={<Contact />} />
+          <Route exact path='/aboutus' element={<About leaders={LEADERS} />} />
           <Route path='/menu/:dishId' element={<DishWithId />} />
 
           <Route path="*" element={<Navigate to="/" />} />
