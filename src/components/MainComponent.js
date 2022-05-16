@@ -5,12 +5,19 @@ import Menu from './MenuComponent';
 import Contact from './ContactComponent';
 import Home from './HomeComponent';
 import DishDetail from './DishdetailComponent';
+import { addComment } from '../redux/ActionCreators';
+
 
 import { Navigate, Route, Routes, useParams, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import About from './AboutComponent';
 
 
+const mapDispatchToProps = dispatch => ({
+  
+  addComment: (dishId, rating, author, comment) => dispatch(addComment(dishId, rating, author, comment))
+
+});
 
 const mapStateToProps = state => ({
   dishes: state.dishes,
@@ -41,8 +48,10 @@ class Main extends Component {
     const DishWithId = () => {
       const { dishId } = useParams();
       return (
-        <DishDetail dish={this.props.dishes.filter((dish) => dish.id === parseInt(dishId, 10))[0]}
-          comments={this.props.comments.filter((comment) => comment.dishId === parseInt(dishId, 10))} />
+        <DishDetail dish={this.props.dishes.filter((dish) => dish.id === parseInt(dishId,10))[0]}
+        comments={this.props.comments.filter((comment) => comment.dishId === parseInt(dishId,10))}
+        addComment={this.props.addComment}
+      />
       );
     };
 
@@ -64,4 +73,4 @@ class Main extends Component {
   }
 }
 
-export default (connect(mapStateToProps)(Main));
+export default (connect(mapStateToProps, mapDispatchToProps)(Main));

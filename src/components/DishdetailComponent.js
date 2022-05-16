@@ -30,7 +30,10 @@ function DishDetail(props) {
                         {renderDish(dish)}
                     </div>
                     <div className="col-12 col-md-5 m-1">
-                        {renderComments(props.comments)}
+                        <RenderComments comments={props.comments}
+                            addComment={props.addComment}
+                            dishId={props.dish.id}
+                        />
                     </div>
                 </div>
             </div>
@@ -51,9 +54,9 @@ const renderDish = (dish) => (
     </Card>
 )
 
-function renderComments(commentsArray = null) {
-    if (commentsArray == null) return <div></div>;
-    const comments = commentsArray.map(c => <div>
+function RenderComments({ comments, addComment, dishId }) {
+    if (comments == null) return <div></div>;
+    const commentsq = comments.map(c => <div>
         <div className='mb-2'>{c.comment}</div>
         <div className='mb-2'>-- {c.author}, {(new Date(c.date)).toDateString()}</div>
     </div>);
@@ -65,10 +68,10 @@ function renderComments(commentsArray = null) {
             </div>
             <div>
                 <div className='list-unstyled'>
-                    {comments}
+                    {commentsq}
                 </div>
                 <div>
-                    <CommentForm />
+                    <CommentForm dishId={dishId} addComment={addComment} />
                 </div>
             </div>
         </div>);
@@ -90,6 +93,10 @@ class CommentForm extends Component {
 
         this.toggleModal = this.toggleModal.bind(this);
 
+    }
+
+    handleSubmit(values) {
+        this.props.addComment(this.props.dishId, values.rating, values.author, values.comment);
     }
 
     toggleModal() {
@@ -123,9 +130,9 @@ class CommentForm extends Component {
                         </Row>
 
                         <Row className="form-group">
-                            <Label htmlFor="yourname" md={10}>Your Name</Label>
+                            <Label htmlFor="author" md={10}>Your Name</Label>
                             <div md={10}>
-                                <Control.text model=".yourname" id="yourname" name="yourname"
+                                <Control.text model=".author" id="author" name="author"
                                     placeholder="Your Name"
                                     className="form-control"
                                     validators={{
@@ -134,7 +141,7 @@ class CommentForm extends Component {
                                 />
                                 <Errors
                                     className="text-danger"
-                                    model=".yourname"
+                                    model=".author"
                                     show="touched"
                                     messages={{
                                         required: 'Required',
@@ -146,14 +153,14 @@ class CommentForm extends Component {
                         </Row>
 
                         <Row className="form-group">
-                            <Label htmlFor="message" md={10}>Comment</Label>
+                            <Label htmlFor="comment" md={10}>Comment</Label>
                             <div md={10}>
-                                <Control.textarea model=".message" id="message" name="message"
+                                <Control.textarea model=".comment" id="comment" name="comment"
                                     rows="6"
                                     className="form-control" />
                             </div>
                         </Row>
-                        
+
                         <Row className="form-group mt-3">
                             <Col md={10}>
                                 <Button type="submit" color="primary">
