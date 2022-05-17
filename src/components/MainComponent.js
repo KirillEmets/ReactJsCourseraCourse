@@ -7,7 +7,7 @@ import Home from './HomeComponent';
 import DishDetail from './DishdetailComponent';
 import { addComment, fetchDishes } from '../redux/ActionCreators';
 
-
+import { actions } from 'react-redux-form';
 import { Navigate, Route, Routes, useParams, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import About from './AboutComponent';
@@ -16,7 +16,9 @@ import About from './AboutComponent';
 const mapDispatchToProps = dispatch => ({
 
   addComment: (dishId, rating, author, comment) => dispatch(addComment(dishId, rating, author, comment)),
-  fetchDishes: () => { dispatch(fetchDishes()) }
+  fetchDishes: () => { dispatch(fetchDishes()) },
+  resetFeedbackForm: () => { dispatch(actions.reset('feedback')) }
+
 
 });
 
@@ -69,7 +71,7 @@ class Main extends Component {
         <Routes>
           <Route path="/" element={HomePage} />
           <Route exact path='/menu' element={<Menu dishes={this.props.dishes} />} />
-          <Route exact path='/contactus' element={<Contact />} />
+          <Route exact path='/contactus' element={<Contact resetFeedbackForm={this.props.resetFeedbackForm} />} />
           <Route exact path='/aboutus' element={<About leaders={this.props.leaders} />} />
           <Route path='/menu/:dishId' element={<DishWithId />} />
 
