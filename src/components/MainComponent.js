@@ -5,7 +5,7 @@ import Menu from './MenuComponent';
 import Contact from './ContactComponent';
 import Home from './HomeComponent';
 import DishDetail from './DishdetailComponent';
-import { addComment, fetchDishes, fetchComments, fetchPromos } from '../redux/ActionCreators';
+import { postComment, fetchDishes, fetchComments, fetchPromos } from '../redux/ActionCreators';
 
 import { actions } from 'react-redux-form';
 import { Navigate, Route, Routes, useParams, withRouter } from 'react-router-dom';
@@ -14,7 +14,7 @@ import About from './AboutComponent';
 
 
 const mapDispatchToProps = dispatch => ({
-  addComment: (dishId, rating, author, comment) => dispatch(addComment(dishId, rating, author, comment)),
+  addComment: (dishId, rating, author, comment) => dispatch(postComment(dishId, rating, author, comment)),
   fetchDishes: () => { dispatch(fetchDishes()) },
   resetFeedbackForm: () => { dispatch(actions.reset('feedback')) },
   fetchComments: () => dispatch(fetchComments()),
