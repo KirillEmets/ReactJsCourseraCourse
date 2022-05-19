@@ -6,7 +6,7 @@ import {
 } from 'reactstrap';
 
 import { Control, LocalForm, Errors } from 'react-redux-form';
-
+import { baseUrl } from '../shared/baseUrl';
 import { Link } from 'react-router-dom';
 import { Component } from 'react';
 import { Loading } from './LoadingComponent';
@@ -14,7 +14,7 @@ import { Loading } from './LoadingComponent';
 
 function DishDetail(props) {
     const dish = props.dish;
-    
+
     if (props.isLoading) {
         return (
             <div className="container">
@@ -67,7 +67,7 @@ function DishDetail(props) {
 
 const renderDish = (dish) => (
     <Card>
-        <CardImg top src={dish.image} alt={dish.name} />
+        <CardImg top src={baseUrl + dish.image} alt={dish.name} />
         <CardBody>
             <CardTitle>{dish.name}</CardTitle>
             <CardText>{dish.description}</CardText>
