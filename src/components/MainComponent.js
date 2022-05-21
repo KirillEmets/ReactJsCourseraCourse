@@ -5,7 +5,7 @@ import Menu from './MenuComponent';
 import Contact from './ContactComponent';
 import Home from './HomeComponent';
 import DishDetail from './DishdetailComponent';
-import { postComment, fetchDishes, fetchComments, fetchPromos, fetchLeaders } from '../redux/ActionCreators';
+import { postComment, fetchDishes, fetchComments, fetchPromos, fetchLeaders, postFeedback } from '../redux/ActionCreators';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import { actions } from 'react-redux-form';
 import { Navigate, Route, Routes, useParams, withRouter } from 'react-router-dom';
@@ -15,6 +15,7 @@ import About from './AboutComponent';
 
 const mapDispatchToProps = dispatch => ({
   addComment: (dishId, rating, author, comment) => dispatch(postComment(dishId, rating, author, comment)),
+  postFeedback: (feedback) => dispatch(postFeedback(feedback)),
   fetchDishes: () => { dispatch(fetchDishes()) },
   resetFeedbackForm: () => { dispatch(actions.reset('feedback')) },
   fetchComments: () => dispatch(fetchComments()),
@@ -78,7 +79,7 @@ class Main extends Component {
         <Routes>
           <Route path="/" element={HomePage} />
           <Route exact path='/menu' element={<Menu dishes={this.props.dishes} />} />
-          <Route exact path='/contactus' element={<Contact resetFeedbackForm={this.props.resetFeedbackForm} />} />
+          <Route exact path='/contactus' element={<Contact resetFeedbackForm={this.props.resetFeedbackForm} postFeedback={this.props.postFeedback} />} />
           <Route exact path='/aboutus' element={<About leaders={this.props.leaders} />} />
           <Route path='/menu/:dishId' element={<DishWithId />} />
 
